@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>test task</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="container">
+		<form class="search">
+			<input type="text" name="search" class="search-string">
+			<button type="submit">Search</button>
+		</form>
+		<div class="filtering">
+			<input type="text" name="filter" placeholder="filter by name" class="filter">
+			<div class="sorter">
+				<span class="sort-caption">sort order:</span>
+				<select id="sorter">
+			      <option value="none">No sorting</option>
+			      <option value="asc">Ascending</option>
+			      <option value="desc">Descending</option>
+			    </select>
+			</div>
+		</div>
+		<div class="page-container">
+			<div class="not-found">Nothing found on your query</div>
+		</div>
+		<div class="pagination-container"></div>
+	</div>
+
+	<template id="video-template">
+		<section class="video">
+			<a href="#" target="_blank">
+				<img class="thumbnail" src="">
+      			<span class="caption"></span>
+			</a>
+		</section> 
+	</template>
+	<template id="not-found">
+		<div class="not-found">Nothing found on your query</div>
+	</template>
+
+	<script defer src="js/video.js"></script>
+	<script defer src="js/page-creator.js"></script>
+	<script defer src="js/pagination.js"></script>	
+	<script defer src="js/filter.js"></script>	
+	<script defer src="js/sorter.js"></script>
+	<script defer src="js/initializer.js"></script>
+</body>
+</html>
